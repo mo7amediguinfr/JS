@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: white;">
+
+    <h1>Hello from Mars!</h1>
+    <h2>Hi there</h2>
+    <h2>Hi there 2</h2>
+    <h3>hi there 3</h3>
+    <h4>Hi there 4</h4>
+    <span id="middleSpan">Quisquam veritatis, quam velit quos eligendi perferendis fugiat eveniet</span>
+    <p>p1</p>
+    <p>p2</p>
+    <p>p3</p>
+    <p>p4</p>
+    <a href="#" style="text-decoration: none; color: white;" class="link" >This is link number1</a>
+    <a href="#" style="text-decoration: none; color: white;" class="link">This is link number2</a>
+    <a href="#" style="text-decoration: none; color: white;" class="link">This is link number3</a>
+    <a href="#" style="text-decoration: none; color: white;" class="link">This is link number4</a>
+    <i>Italic1</i>
+    <i>Italic2</i>
+    <i>Italic3</i>
+    <i>Italic4</i>
+    <p class="classe de paragraphe 1" id="p1">This is a paragraph1</p>
+    <button type="button" id="myBtn">ClickMe</button>
+    <img src="" id="logo" alt="">
+    <p id="p2">This is a paragrph 2</p>
+    <div id="main">
+        <h1>Hello World</h1>
+    </div>
+    <div id="med">
+        Mohamed Iguinfr
+        <i id="gon">gon</i>
+    </div>
+    <div id="parentelem">
+        <div id="childelem">Child</div>
+    </div>
+    <em>Clik Me</em>
+    <script language="javascript" type="text/javascript" >
+        // var a=5;
+        // var b=5;
+        // resultat=a+b;
+        // document.write(resultat);
+        // console.log(document);
+        var el =document.querySelector('h1');
+        console.log('el:',el);
+        var a=document.querySelector('h2'); //hna maghyajibch Hi there 2 hit kijib gha l h2 lli diklara lwl
+        console.log(a); 
+        var a=document.querySelector('h3');
+        console.log(a);
+        var a=document.getElementById("middleSpan");
+        console.log(a);
+        // console.log(document.getElementById("middleSpan"));
+        console.log(document.querySelector('h3'));
+        var a=document.querySelectorAll('p'); //hada kijib ga3 selectors li fihum p
+        console.log(a);
+        var a=document.getElementsByClassName('link');
+        console.log(a);
+        var a=document.getElementsByTagName('i');
+        console.log(a);
+        var a =document.getElementById('p1');
+        console.log(a);
+        var className=a.getAttribute('class'); //hna kanjib l class dial p1
+        console.log(className);
+        let btn=document.getElementById('myBtn');
+        console.log(btn);
+        btn.setAttribute('class','click-btn'); //hna kanzid class l btn
+        btn.setAttribute('disabled','true');
+        var a=document.getElementById('logo');
+        console.log(a);
+        a.setAttribute('src','mohamedimg.jpg');
+        a.setAttribute('width','10%') //hna zdt lwidth li makanch u 3titu valeur dialu
+        a.setAttribute('height','20px')
+        a.removeAttribute('height','width');
+        // const test=document.getElementById('logo');
+        // console.log(test);
+        // test.setAttribute('disabled','true')
+        var elem=document.getElementById('p2');
+        elem.style.color="red";
+        elem.style.fontSize="40px";
+        elem.style.fontWeight="bold";
+        elem.style.textAlign="center";
+        console.log(elem);
+        var newDiv=document.createElement('div');
+        console.log(newDiv);
+        var newContent=document.createTextNode('Hi how are you doing?');
+        console.log(newContent);
+        newDiv.appendChild(newContent); //hna zdt newcontent wst mn newdiv
+        var currentDiv=document.getElementById('main');
+        document.body.appendChild(newDiv,currentDiv); //hna zdna newdiv li déja kan fiha newcontent l currentdiv li déja kan endna u drnah f lbody
+        var contents=document.getElementById('med').innerHTML;  //hna Mohamed Iguinfr ghadi tktb 3adya f l console bla les tags 
+        console.log(contents);
+        var medDiv=document.getElementById('med');
+        medDiv.innerHTML='<i>Kilua</i>'; //hna bdlt l contenue dial div med li kan mktub fih Mohamed Iguinfr u gon l kilua
+        var parentElem=document.getElementById('parentelem');
+        var childElem=document.getElementById('childelem');
+        parentElem.removeChild(childElem); //hna ghan7yd child 
+        console.log(parentElem);
+        let myp=document.querySelector("em");
+        myp.onclick=function(){ //hna fach ghanwrk ela em ghatktb Hi f console
+            console.log("Hi")
+        };
+        // let myp1=document.querySelector("em");
+        // myp1.onclick=one;   //Hadi method khhra bach njib l function
+        function one(){
+            console.log("Hi from one")
+        }
+        function two(){
+            console.log("Hi from rwo")
+        }
+        myp.addEventListener("click",function(){
+            console.log("Hi from event")
+        })
+        myp.addEventListener("click",one);
+        myp.addEventListener("click",two);
+        
+        var askEmail=prompt('Entrez votre email');
+        var email='mohamediguinfr@hotmail.com';
+        if(askEmail.toLowerCase().trim()==email){ //hna kan endi f data email mktubb huruf sghira u illa l user ktb lia email b huruf kbira hna kanrdhum b huruf sghira kima kanu ead kan9arnhum mea l email li kan endi u drt trim bach ila kant chi masafa f dakchi li ktb thyd flwl u la flkhr thyd
+            alert('You are login');
+        }else{
+            alert('Email incorrect')
+        };
+    </script>
+    <!-- <script type="text/javascript" src="Javascript1.js"></script> -->
+</body>
+</html>
